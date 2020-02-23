@@ -1,5 +1,7 @@
 # ETL9
 
+![alt text](etl.png "Preview")
+
 **ETL9 makes data pipelining fun.**
 
 Simple all-in-one container for FaaS-based ETL pipelines.
