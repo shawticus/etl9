@@ -1,6 +1,6 @@
 # ETL9
 
-![alt text](etl.png "Preview")
+![alt text](etl9.png "Preview")
 
 **ETL9 makes data pipelining fun.**
 
