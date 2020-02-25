@@ -21,21 +21,28 @@ const useStyles = makeStyles({
       color: "#fff",
       fontWeight: "bold"
     }
-  }
+  },
+  createButton: {
+    border: "1px solid green",
+    padding: "1em",
+    margin: "1em"
+  },
+	logo: {
+		padding:".5em",
+		paddingBottom:".25em",
+		color:"#222"
+	}
 })
 
+const createButton =  { label: "Create Pipeline", href: "/create-pipeline" }
+
 const items = [
-  { label: "Dashboard", href: "/" },
-  { label: "Instances", href: "/instances" },
-  { label: "Launch Instance", href: "/launch-instance" },
+  { label: "Welcome", href: "/" },
   "sep",
+  { label: "Instances", href: "/instances" },
   { label: "Pipelines", href: "/pipelines" },
   { label: "Stages", href: "/stages" },
   { label: "Types", href: "/types" },
-  "sep",
-  { label: "Create Pipeline", href: "/create-pipeline" },
-  { label: "Create Stage", href: "/create-stage" },
-  { label: "Create Type", href: "/create-type" },
   "sep",
   { label: "Environment", href: "/environment" },
   { label: "Errors & Warnings", href: "/errors" }
@@ -47,6 +54,7 @@ export const SidebarMenu = ({ currentPageTitle }: any) => {
   const { navigate } = useNavigation()
   return (
     <div className={c.root}>
+	<h1 className={c.logo}>ETL9</h1>
       <List>
         {items.map(
           (item, i) =>

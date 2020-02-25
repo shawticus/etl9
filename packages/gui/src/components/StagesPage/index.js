@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react"
 import Page from "../Page"
-import TextField from "@material-ui/core/TextField"
 import { makeStyles } from "@material-ui/styles"
 import { useAPI } from "../APIProvider"
 import ListSearch from "../ListSearch"
@@ -11,12 +10,20 @@ import StageEditor from "../StageEditor"
 import PipelineDiagram from "../PipelineDiagram"
 import useNavigation from "../../utils/use-navigation.js"
 
+const createButton =  { label: "+ New Stage", href: "/create-stage" }
+
 const useStyles = makeStyles({
   root: { padding: 20 },
   actions: { paddingTop: 20, textAlign: "right" },
   nav: {
     display: "flex",
     paddingBottom: 20
+  },
+  createButton: {
+    border: "1px solid green",
+    padding: "1em",
+    margin: "1em",
+	color: "green"
   }
 })
 
@@ -47,6 +54,7 @@ export const StagesPage = () => {
 
   return (
     <Page title="Stages">
+      <Button className={c.createButton} onClick={() => navigate(createButton.href) } >{createButton.label} </Button>
       {!selectedStage ? (
         <ListSearch
           placeholder="Search for Stage"

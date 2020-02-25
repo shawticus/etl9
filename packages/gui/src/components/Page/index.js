@@ -2,7 +2,6 @@
 
 import React from "react"
 import { makeStyles } from "@material-ui/styles"
-import Header from "../Header"
 import CenteredContent from "../CenteredContent"
 import SidebarMenu from "../SidebarMenu"
 import Grid from "@material-ui/core/Grid"
@@ -20,7 +19,6 @@ export const Page = ({ title, children }: any) => {
   usePageTitle(`ETL9 | ${title}`)
   return (
     <div className={c.root}>
-      <Header pageTitle={title} />
       <CenteredContent>
         <Grid container>
           <Grid item xs={12} sm={4} md={3} lg={2}>

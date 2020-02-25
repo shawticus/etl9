@@ -14,7 +14,7 @@ services:
       - "5432:5432"
 
   etl9:
-    image: "workaroundonline/etl9"
+    image: "shawticus/etl9"
     depends_on:
       - postgres
     environment:

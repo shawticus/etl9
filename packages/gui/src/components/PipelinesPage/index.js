@@ -11,12 +11,20 @@ import PipelineEditor from "../PipelineEditor"
 import Instances from "../Instances"
 import useNavigation from "../../utils/use-navigation.js"
 
+const createButton =  { label: "Create Pipeline", href: "/create-pipeline" }
+
 const useStyles = makeStyles({
   root: { padding: 20 },
   actions: { paddingTop: 20, textAlign: "right" },
   nav: {
     display: "flex",
     paddingBottom: 20
+  },
+  createButton: {
+    border: "1px solid green",
+    padding: "1em",
+    margin: "1em",
+	color: "green"
   }
 })
 
@@ -40,6 +48,7 @@ export const PipelinesPage = () => {
 
   return (
     <Page title="Pipelines">
+            <Button className={c.createButton} onClick={() => navigate(createButton.href) } >{createButton.label} </Button>
       {!selectedPipeline ? (
         <ListSearch
           placeholder="Search for Pipeline"

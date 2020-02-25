@@ -11,11 +11,19 @@ import TypeEditor from "../TypeEditor"
 import AreYouSureButton from "../AreYouSureButton"
 import useNavigation from "../../utils/use-navigation.js"
 
+const createButton =  { label: "+ New Type", href: "/create-type" }
+
 const useStyles = makeStyles({
   root: { padding: 20 },
   actions: { paddingTop: 20, textAlign: "right" },
   nav: {
     paddingBottom: 20
+  },
+  createButton: {
+    border: "1px solid green",
+    padding: "1em",
+    margin: "1em",
+	color: "green"
   }
 })
 
@@ -38,6 +46,7 @@ export const TypesPage = () => {
 
   return (
     <Page title="Types">
+                  <Button className={c.createButton} onClick={() => navigate(createButton.href) } >{createButton.label} </Button>
       {!selectedType ? (
         <ListSearch
           placeholder="Search for Type"

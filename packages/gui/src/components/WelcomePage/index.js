@@ -33,7 +33,7 @@ const useStyles = makeStyles({
   }
 })
 
-export const DashboardPage = () => {
+export const WelcomePage = () => {
   const c = useStyles()
   const { navigate } = useNavigation()
 
@@ -43,22 +43,16 @@ export const DashboardPage = () => {
   ]
 
   return (
-    <Page title="Dashboard">
+    <Page title="Welcome">
       <div className={c.root}>
-        <div className={c.statusBlocks}>
-          {statusBlocks.map(sb => (
-            <div className={c.statusBlock}>
-              <div className="title">{sb.title}</div>
-              <div className="value">{sb.value}</div>
-            </div>
-          ))}
-        </div>
-        <div className={c.instances}>
-          <GroupedInstances />
-        </div>
+
+		<h1>Welcome to ETL9</h1>
+		<h3>An pipeline orchestrator for everyone.</h3>
+
+
       </div>
     </Page>
   )
 }
 
-export default DashboardPage
+export default WelcomePage

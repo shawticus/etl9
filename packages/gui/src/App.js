@@ -12,7 +12,7 @@ import CreateStagePage from "./components/CreateStagePage"
 import CreateTypePage from "./components/CreateTypePage"
 import CreatePipelinePage from "./components/CreatePipelinePage"
 import LaunchInstancePage from "./components/LaunchInstancePage"
-import DashboardPage from "./components/DashboardPage"
+import WelcomePage from "./components/WelcomePage"
 import EnvironmentPage from "./components/EnvironmentPage"
 import SettingsPage from "./components/SettingsPage"
 import InstancePage from "./components/InstancePage"
@@ -24,7 +24,7 @@ function App() {
     <APIProvider>
       <Theme>
         <Locations>
-          <Location path="/" handler={DashboardPage} />
+          <Location path="/" handler={WelcomePage} />
           <Location path="/launch-instance" handler={LaunchInstancePage} />
           <Location path="/pipelines" handler={PipelinesPage} />
           <Location path="/stages" handler={StagesPage} />
